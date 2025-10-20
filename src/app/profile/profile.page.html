@@ -1,0 +1,26 @@
+<ion-content class="main-conteiner" fullscreen="true">
+  <ion-card class="header-conteiner">
+    <ion-card class="image-contenier">
+      <ion-card-header>
+        <ion-card-title>User Profile</ion-card-title>
+        <ion-img class="image" src="../../assets/profile.jpg" alt="Profile Image"></ion-img>
+        <div class="icons-conteiner">
+          <ion-icon src="../../assets/instagram.svg" (click)="openLink('https://www.instagram.com/guasmoo/')"></ion-icon>
+          <ion-icon src="../../assets/github.svg" (click)="openLink('https://github.com/guasmo')"></ion-icon>
+          <ion-icon src="../../assets/discord.svg" (click)="openLink('https://discord.gg/rXjrdesa')"></ion-icon>
+        </div>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card-content class="form-conteiner">
+      <ion-input placeholder="Nombre de usuario"></ion-input>
+      <ion-input placeholder="Correo electrónico"></ion-input>
+      <ion-input type="password" placeholder="Password" value="NeverGonnaGiveYouUp">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+      </ion-input>
+      <ion-button id="present-alert">Save</ion-button>
+      <ion-alert trigger="present-alert" header="Save changes?"
+        message="A message should be a short, complete sentence." [buttons]="alertButtons"></ion-alert>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
